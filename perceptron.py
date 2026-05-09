@@ -17,12 +17,6 @@ class Perceptron:
         return 0
 
     def adjust_w(self):
-        # for each instance we have a list of attributes
-
-        #              x0 + x1 ... xn
-        attributes = 1 + self.attributes
-
-        # and also a list of weights that is the same for them all
 
         # w0 ... wn
         self.weights = [1 for _ in range(len(attributes))]
@@ -33,6 +27,13 @@ class Perceptron:
             if entry[-1] != self.classify(entry):
 
                 failed = True
+
+                # for each instance we have a list of attributes
+
+                #              x0 + x1 ... xn
+               
+
+                # and also a list of weights that is the same for them all
 
         
         if failed: self.adjust_w()
